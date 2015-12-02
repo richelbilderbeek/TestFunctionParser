@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>162</width>
-    <height>246</height>
+    <height>243</height>
    </rect>
   </property>
   <property name="font">
@@ -63,14 +63,14 @@ QPushButton { font: 32px &quot;Courier New&quot;, courier, monospace }</string>
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="ToolTestFunctionParser.qrc">:/ToolTestFunctionParser/images/ToolTestFunctionParserSimple.png</pixmap>
+      <pixmap resource="TestFunctionParser.qrc">:/TestFunctionParser/images/TestFunctionParserSimple.png</pixmap>
      </property>
     </widget>
    </item>
   </layout>
  </widget>
  <resources>
-  <include location="ToolTestFunctionParser.qrc"/>
+  <include location="TestFunctionParser.qrc"/>
  </resources>
  <connections/>
 </ui>

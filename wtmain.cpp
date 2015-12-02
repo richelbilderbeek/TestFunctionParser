@@ -21,34 +21,34 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #include <Wt/WApplication>
 #include <Wt/WContainerWidget>
 #include <Wt/WEnvironment>
-//---------------------------------------------------------------------------
+
 #include "wttestfunctionparsermenudialog.h"
 #include "wtautoconfig.h"
-//---------------------------------------------------------------------------
+
 struct WtApplication : public Wt::WApplication
 {
   WtApplication(const Wt::WEnvironment& env)
     : Wt::WApplication(env),
-    m_dialog(new WtTestFunctionParserMenuDialog)
+    m_dialog(new ribi::WtTestFunctionParserMenuDialog)
   {
     this->setTitle("TestFunctionParser");
     this->useStyleSheet("wt.css");
     root()->addWidget(m_dialog);
   }
   private:
-  WtTestFunctionParserMenuDialog * const m_dialog;
+  ribi::WtTestFunctionParserMenuDialog * const m_dialog;
 };
-//---------------------------------------------------------------------------
+
 Wt::WApplication *createApplication(
   const Wt::WEnvironment& env)
 {
   return new WtApplication(env);
 }
-//---------------------------------------------------------------------------
+
 int main(int argc, char **argv)
 {
-  WtAutoConfig::SaveDefaultStylesheet();
-  WtAutoConfig a(argc,argv,createApplication);
+  ribi::WtAutoConfig::SaveDefaultStylesheet();
+  ribi::WtAutoConfig a(argc,argv,createApplication);
   return a.Run();
 }
-//---------------------------------------------------------------------------
+

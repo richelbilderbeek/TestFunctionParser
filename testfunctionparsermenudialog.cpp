@@ -24,7 +24,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #include <iostream>
 
 #include "fparser.hh"
-#include "richelbilderbeekprogram.h"
 #include "trace.h"
 #include "testtimer.h"
 
@@ -49,7 +48,7 @@ ribi::About ribi::TestFunctionParserMenuDialog::GetAbout() const noexcept
     "Richel Bilderbeek",
     "TestFunctionParser",
     "tool to demonstrate Warp's FunctionParser class",
-    "the 3rd of Januari 2015",
+    "December 2nd of 2015",
     "2010-2015",
     "http://www.richelbilderbeek.nl/ToolTestFunctionParser.htm",
     GetVersion(),
@@ -76,17 +75,10 @@ ribi::Help ribi::TestFunctionParserMenuDialog::GetHelp() const noexcept
   );
 }
 
-boost::shared_ptr<const ribi::Program> ribi::TestFunctionParserMenuDialog::GetProgram() const noexcept
-{
-  const boost::shared_ptr<const Program> p {
-    new ProgramTestFunctionParser
-  };
-  assert(p);
-  return p;
-}
+
 std::string ribi::TestFunctionParserMenuDialog::GetVersion() const noexcept
 {
-  return "2.6";
+  return "3.0";
 }
 
 std::vector<std::string> ribi::TestFunctionParserMenuDialog::GetVersionHistory() const noexcept
@@ -99,7 +91,8 @@ std::vector<std::string> ribi::TestFunctionParserMenuDialog::GetVersionHistory()
     "2013-04-22: Version 2.3: added image to Welcome to desktop version",
     "2013-11-05: version 2.4: conformized for ProjectRichelBilderbeekConsole",
     "2014-07-04: version 2.5: added console version",
-    "2015-01-03: version 2.6: set locale to English in Desktop version" //SET_LOCALE_TO_ENGLISH_QTTESTFUNCTIONPARSERMAINDIALOG
+    "2015-01-03: version 2.6: set locale to English in Desktop version", //SET_LOCALE_TO_ENGLISH_QTTESTFUNCTIONPARSERMAINDIALOG
+    "2015-12-02: version 3.0: moved to own GitHub"
   };
 }
 
